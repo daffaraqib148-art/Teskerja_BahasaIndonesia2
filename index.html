@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kerja: Asah Bahasa Profesional (ABP)</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Asah Bahasa Profesional (ABP)</h1>
+
+        <div id="start-screen">
+            <h2>Selamat Datang Calon Karyawan!</h2>
+            <p>Silakan isi data diri Anda untuk memulai tes Bahasa Indonesia Profesional.</p>
+            <form id="start-form">
+                <input type="text" id="candidate-name" placeholder="Nama Lengkap" required>
+                <input type="text" id="candidate-role" placeholder="Posisi yang Dilamar / Kelas" required>
+                <button type="submit" id="start-button" class="action-btn">Mulai Kuis</button>
+            </form>
+        </div>
+
+        <div id="game-screen" style="display: none;">
+            <div class="header-info">
+                <span id="timer-display">Waktu: 20s</span>
+                <span id="score-info">Skor: <span id="score-display">0</span></span>
+            </div>
+            
+            <div class="question-box">
+                <p id="question-area">Memuat pertanyaan...</p>
+            </div>
+            
+            <div id="options-container">
+                </div>
+            
+            <p id="feedback" class="feedback-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

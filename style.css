@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1abc9c 0%, #004d40 100%); /* Gradien Warna Segar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #004d40;
+    margin-top: 0;
+    border-bottom: 3px solid #1abc9c;
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+/* --- Tampilan Awal (Start Screen) --- */
+#start-screen {
+    padding: 20px;
+}
+
+#start-screen h2 {
+    color: #00796b;
+}
+
+#start-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.action-btn {
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.action-btn:hover {
+    background-color: #009688;
+    transform: translateY(-2px);
+}
+
+/* --- Tampilan Game --- */
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00796b;
+    padding: 10px;
+    border: 1px dashed #e0f2ff;
+    border-radius: 5px;
+}
+
+.question-box {
+    background-color: #f0fff4; /* Latar Belakang Lebih Cerah */
+    border: 1px solid #1abc9c;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#question-area {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
+#options-container {
+    display: grid;
+    gap: 10px;
+}
+
+.option-btn {
+    background-color: #00796b;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}
+
+/* Feedback Visual */
+.correct { background-color: #4CAF50 !important; }
+.incorrect { background-color: #f44336 !important; }
+
+/* Hasil Akhir Styling */
+.result-box {
+    padding: 30px;
+    border: 3px solid #1abc9c;
+    border-radius: 10px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.result-box h3 {
+    color: #004d40;
+    font-size: 1.8em;
+}
+
+.lulus { color: #4CAF50; font-size: 1.5em; font-weight: 900; }
+.cukup { color: #ff9800; font-size: 1.5em; font-weight: 900; }
+.perlu-perbaikan { color: #f44336; font-size: 1.5em; font-weight: 900; }
+.note { font-style: italic; color: #777; margin-top: 20px; }
